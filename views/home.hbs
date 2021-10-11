@@ -1,0 +1,16 @@
+{{>header}}
+<div class="container">
+  <div class="form-container">
+    <form method="POST" action="/entry" class="form">
+      <label for="input" class="label"> Enter Data </label>
+      <input name="input" id="input" class="input" type="text" value="{{#if inputData}}{{inputData}}{{/if}}" />
+      <div class="form-errors">
+        {{#if errorMessage}}
+          <p>* {{errorMessage}}</p>
+        {{/if}}
+      </div>
+      <button type="submit" class="btn">Submit</button>
+    </form>
+  </div>
+</div>
+{{>footer}}
